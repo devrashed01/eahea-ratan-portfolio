@@ -121,22 +121,3 @@
     color: black !important;
   }
 }
-
-@media print {
-  @page {
-    size: A4;
-    margin: 12mm 0;
-  }
-  :root {
-    color-scheme: light;
-  }
-  html,
-  body {
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
-  }
-  li,
-  section > h2 {
-    break-inside: avoid;
-  }
-}

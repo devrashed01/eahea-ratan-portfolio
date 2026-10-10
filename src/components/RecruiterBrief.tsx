@@ -53,12 +53,6 @@ export function RecruiterBrief({ onExit }: { onExit: () => void }) {
                 </span>
               ))}
             </p>
-            <p className="hidden print:block">
-              Portfolio:{' '}
-              <a className="font-medium underline" href={profile.siteUrl}>
-                {profile.siteUrl.replace(/^https:\/\/|\/$/g, '')}
-              </a>
-            </p>
           </div>
         </header>
 
@@ -86,12 +80,7 @@ export function RecruiterBrief({ onExit }: { onExit: () => void }) {
                   <p className="font-medium">
                     {r.title} — {r.company}
                   </p>
-                  <p className="text-sm text-ink/60 text-pretty print:hidden">{r.points[0]}</p>
-                  <ul className="mt-1 hidden list-disc space-y-0.5 pl-4 text-sm text-ink/70 marker:text-ink/30 print:block">
-                    {r.points.map((pt) => (
-                      <li key={pt}>{pt}</li>
-                    ))}
-                  </ul>
+                  <p className="text-sm text-ink/60 text-pretty">{r.points[0]}</p>
                 </div>
                 <p className="font-mono text-xs text-ink/50 sm:text-right">
                   {r.start} – {r.end}
