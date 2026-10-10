@@ -9,43 +9,52 @@
 <title>Eahea Ratan — CV</title>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
-  @page { size: A4; margin: 14mm 15mm; }
+  @page { size: A4; margin: 18mm 19mm 18mm; }
   * { box-sizing: border-box; }
-  body { margin: 0; font: 9.6pt/1.45 'Inter Tight', system-ui, sans-serif; color: #141413; }
+  body { margin: 0; font: 10.4pt/1.62 'Inter Tight', system-ui, sans-serif; color: #1a1a18;
+         font-feature-settings: 'ss01', 'cv11'; -webkit-font-smoothing: antialiased; }
   a { color: inherit; }
-  h1 { font: 34pt/1 'Instrument Serif', Georgia, serif; margin: 0; letter-spacing: -0.01em; }
-  .role { margin: 4px 0 6px; font-size: 11pt; }
+  h1 { font: 42pt/0.95 'Instrument Serif', Georgia, serif; margin: 0; letter-spacing: -0.015em; }
+  .role { margin: 10px 0 14px; font-size: 12.5pt; line-height: 1.3; }
   .role b { font-weight: 600; }
-  .role span { color: #66645e; }
-  .contact { color: #3d3c38; font-size: 8.8pt; }
-  .contact a { text-decoration: none; border-bottom: 1px solid #c9c6bd; }
-  .contact .pf { font-weight: 600; color: #141413; border-bottom-color: #8fb800; }
-  h2 { font: 600 8pt/1 'Inter Tight', sans-serif; letter-spacing: 0.12em; text-transform: uppercase; color: #6b8a00;
-       margin: 15px 0 7px; padding-bottom: 5px; border-bottom: 1px solid #dedbd2; }
-  h3 { font-size: 10.2pt; font-weight: 600; margin: 9px 0 0; display: flex; justify-content: space-between; gap: 12px; }
-  h3 small { font-weight: 400; color: #66645e; font-size: 8.6pt; white-space: nowrap; }
-  .where { color: #66645e; font-size: 8.6pt; margin: 1px 0 3px; }
-  ul { margin: 2px 0 0; padding-left: 14px; }
-  li { margin: 1.5px 0; }
+  .role span { color: #6f6d66; }
+  .contact { color: #45443f; font-size: 9.6pt; line-height: 1.75; }
+  .contact a { text-decoration: none; border-bottom: 1px solid #cfccc3; }
+  .contact .pf { font-weight: 600; color: #1a1a18; border-bottom: 1.5px solid #8fb800; }
+  h2 { font: 600 8.6pt/1 'Inter Tight', sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: #5f7a00;
+       margin: 28px 0 14px; padding-bottom: 8px; border-bottom: 1px solid #e2dfd6; break-after: avoid; }
+  h3 { font-size: 11.2pt; font-weight: 600; line-height: 1.35; margin: 0; display: flex; justify-content: space-between;
+       align-items: baseline; gap: 16px; }
+  h3 small { font-weight: 400; color: #6f6d66; font-size: 9.4pt; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .where { color: #6f6d66; font-size: 9.6pt; margin: 3px 0 8px; }
+  ul { margin: 0; padding-left: 16px; }
+  li { margin: 0 0 5px; padding-left: 3px; }
+  li:last-child { margin-bottom: 0; }
   li::marker { color: #8fb800; }
   p { margin: 0; }
-  .skills li { list-style: none; margin-left: -14px; }
-  .job { break-inside: avoid; }
+  .summary { font-size: 10.8pt; line-height: 1.7; color: #2a2a27; max-width: 165mm; }
+  .skills li { list-style: none; margin-left: -16px; padding-left: 0; margin-bottom: 6px; }
+  .skills b { font-weight: 600; }
+  .job { margin-bottom: 20px; }
+  .job h3, .where { break-after: avoid; }
+  li { break-inside: avoid; }
+  .job:last-of-type { margin-bottom: 0; }
+  .projects li { margin-bottom: 9px; }
 </style>
 </head>
 <body>
   <h1>Eahea Ratan</h1>
   <p class="role"><b>Senior Frontend Engineer</b> <span>· React · TypeScript · Next.js</span></p>
   <p class="contact">
-    Dhaka, Bangladesh · Open to remote (EU/US) and on-site · +880 1616 021140 ·
-    <a href="mailto:devrashed01@gmail.com">devrashed01@gmail.com</a> ·
+    Dhaka, Bangladesh · Open to remote (EU/US) and on-site<br />
+    <a href="mailto:devrashed01@gmail.com">devrashed01@gmail.com</a> · +880 1616 021140<br />
     <a href="https://www.linkedin.com/in/rashadul-islam12345">linkedin.com/in/rashadul-islam12345</a> ·
     <a href="https://github.com/devrashed01">github.com/devrashed01</a> ·
     Portfolio: <a class="pf" href="https://eahearatan.netlify.app/">eahearatan.netlify.app</a>
   </p>
 
   <h2>Summary</h2>
-  <p>Frontend engineer with 9+ years building production web apps in React, Next.js and TypeScript, currently Software Engineer II at Strativ, shipping booking and admin products for European clients. Leads features from API contract to release, reviews code and mentors developers, working async with a team in Sweden. Strong in accessible, fast UI built from Figma designs. Known for building internal tools and AI-assisted workflows that cut repetitive work for the whole team. Previously led a frontend team and delivered products for blockchain clients and the Envato marketplace.</p>
+  <p class="summary">Frontend engineer with 9+ years building production web apps in React, Next.js and TypeScript, currently Software Engineer II at Strativ, shipping booking and admin products for European clients. Leads features from API contract to release, reviews code and mentors developers, working async with a team in Sweden. Strong in accessible, fast UI built from Figma designs. Known for building internal tools and AI-assisted workflows that cut repetitive work for the whole team. Previously led a frontend team and delivered products for blockchain clients and the Envato marketplace.</p>
 
   <h2>Skills</h2>
   <ul class="skills">
@@ -112,7 +121,7 @@
   </div>
 
   <h2>Selected Projects</h2>
-  <ul>
+  <ul class="projects">
     <li><b><a href="https://devrashed01.github.io/workpilot/">WorkPilot</a> (macOS app, public beta):</b> Creator and maintainer, working with 3 contributors. In daily use by working engineers, shipped through its own self-updating release pipeline (35+ versions). A native Swift app that records commits, PRs, meetings and Jira activity, then writes worklogs and standups from it. Integrates Jira, Git, GitHub, Bitbucket and Google Calendar; all data stays on-device in SQLite. Optional AI via the Claude CLI, plus an on-device Apple Intelligence text fixer that rejects any rewrite that changes facts.</li>
     <li><b>Mod Header (Chrome extension):</b> Replacement for a pulled third-party header-modding tool, built with minimal permissions and local-only storage.</li>
     <li><b>Mac proximity auto-lock (Swift package):</b> Locks the screen when the paired iPhone moves away, using CoreBluetooth BLE signal strength.</li>
