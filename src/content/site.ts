@@ -12,6 +12,7 @@ export const profile = {
   location: 'Dhaka, Bangladesh',
   timezone: 'Asia/Dhaka',
   openTo: 'Open to remote (EU / US) and on-site roles',
+  siteUrl: 'https://eahearatan.netlify.app/',
   email: 'devrashed01@gmail.com',
   phone: '+880 1616 021140',
   cvUrl: `${import.meta.env.BASE_URL}Eahea-Ratan-CV.pdf`,
@@ -244,7 +245,7 @@ export const projects: Project[] = [
     kind: 'macOS · gesture control',
     year: '2026',
     stack: ['Python', 'MediaPipe', 'OpenCV', 'Quartz'],
-    blurb: 'Control your Mac with your hands through the webcam: fist for Mission Control, ✌️ for a screenshot, swipes to switch desktops.',
+    blurb: 'Control your Mac with your hands through the webcam: fist for Mission Control, a peace sign for a screenshot, swipes to switch desktops.',
     details: ['Hold-to-fire debouncing and two-hand support.', 'Runs fully on-device on Apple Silicon.'],
   },
   {

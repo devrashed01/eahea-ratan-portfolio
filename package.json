@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "cv": "\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --no-pdf-header-footer --virtual-time-budget=3000 --print-to-pdf=public/Eahea-Ratan-CV.pdf \"file://$PWD/cv/cv.html\""
+    "cv": "node scripts/cv.mjs"
   },
   "dependencies": {
     "@react-three/fiber": "^9.7.0",
