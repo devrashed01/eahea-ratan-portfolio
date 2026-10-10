@@ -1,0 +1,123 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-serif: 'Instrument Serif', ui-serif, Georgia, serif;
+  --font-sans: 'Inter Tight', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  --color-ink: #0b0b0a;
+  --color-ink-2: #131312;
+  --color-ink-3: #1c1c1a;
+  --color-line: #2a2a27;
+  --color-paper: #f1ede4;
+  --color-mute: #9a958a;
+  --color-dim: #6b675f;
+  --color-signal: #d4ff3a;
+  --color-ember: #ff6a3d;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    background: var(--color-ink);
+  }
+
+  body {
+    @apply bg-ink text-paper font-sans antialiased;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+
+  ::selection {
+    background: var(--color-signal);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2a27;
+    border-radius: 99px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .grain::after {
+    content: '';
+    position: fixed;
+    inset: -50%;
+    pointer-events: none;
+    z-index: 60;
+    opacity: 0.045;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    animation: grain 8s steps(10) infinite;
+  }
+}
+
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-3%, 2%); }
+  40% { transform: translate(2%, -3%); }
+  60% { transform: translate(-2%, -1%); }
+  80% { transform: translate(3%, 3%); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.caret::after {
+  content: '▍';
+  margin-left: 2px;
+  color: var(--color-signal);
+  animation: blink 1s steps(1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grain::after,
+  .caret::after {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  html,
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
